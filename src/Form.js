@@ -52,7 +52,7 @@ export default function Form() {
                         type="password"
                         aria-invalid={errors.password ? "true" : "false"}
                         {...register('password', {
-                            required: '*password is required', pattern: {
+                            required: 'password is required', pattern: {
                                 value: /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])/,
                                 message: 'password must have 1 number, 1 letter, 1 special char'
                             },
@@ -73,7 +73,7 @@ export default function Form() {
                         type="password"
                         aria-invalid={errors.password_confirm ? "true" : "false"}
                         {...register('password_confirm', {
-                            required: true,
+                            required: 'please confirm password',
                             validate: (value) =>
                                 value === password.current || "The passwords do not match"
                         })}
@@ -87,7 +87,7 @@ export default function Form() {
                         name="pet_name"
                         aria-invalid={errors.pet_name ? "true" : "false"}
                         {...register('pet_name', {
-                            required: true
+                            required: 'pet name is required'
                         })}
                     />
                     {errors.pet_name && <span>{errors.pet_name.message}</span>}
@@ -99,7 +99,7 @@ export default function Form() {
                         name="pet_weight"
                         aria-invalid={errors.pet_weight ? "true" : "false"}
                         {...register('pet_weight', {
-                            required: true,
+                            required: 'pet weight is required',
                             min: { value: 3, message: "minimum of 3 lbs" },
                             max: { value: 180, message: "maximum of 180 lbs" }
                         })}
@@ -113,7 +113,7 @@ export default function Form() {
                         name="pet_weight_ideal"
                         aria-invalid={errors.pet_weight ? "true" : "false"}
                         {...register('pet_weight_ideal', {
-                            required: true,
+                            required: 'ideal pet weight is required',
                             min: { value: 3, message: "minimum of 3 lbs" },
                             max: { value: 180, message: "maximum of 180 lbs" }
                         })}
