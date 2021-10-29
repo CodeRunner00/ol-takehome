@@ -1,0 +1,35 @@
+label, input, span {
+    display: block;
+}
+
+.input-wrapper {
+    margin-bottom: 20px;
+}
+label {
+    padding-left: 1%;
+}
+input:not([type="submit"]) {
+    width: 100%;
+    padding-left: 2%;
+}
+
+span {
+    color: red;
+}
+
+input[type="submit"] {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 3em;
+    width: 8em;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+
+input.disabled {
+    color: grey;
+    cursor: default;
+    border: 2px solid grey;
+}

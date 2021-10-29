@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+}
+
+.main-content-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 2%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-content {
+  width: 50%;
+  img {
+    width: 100%;
+  }
+  @media screen and (max-width: 769px) {
+    width: 100%;
+  }
+}
+
+.form-container {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	padding-left: 4%;
+	flex-direction: column;
+  @media screen and (max-width: 769px) {
+    margin-top: 5%;
+    width: 100%;
+    padding-left: 0;
+  }
+}
